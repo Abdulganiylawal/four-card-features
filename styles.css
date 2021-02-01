@@ -1,0 +1,222 @@
+/* Variables */
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONT */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile styles*/
+
+body {
+    min-height: 100vh;
+    background-color: var(--Very-Light-Gray);
+}
+
+.card-features {
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.card-features-intro {
+    margin-bottom: 5.5rem;
+    text-align: center;
+
+}
+
+.card-features-intro h1 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+
+.card-features-intro span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+
+.card-features-intro p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--Grayish-Blue);
+}
+
+.card-feature__one {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.8rem 1.6rem;
+    margin-bottom: 2rem;
+    box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    border-top: 5px solid var(--Cyan);
+}
+
+.card-features__header {
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.card-features__desc {
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.img-container {
+    position: relative;
+    height: 100px;
+}
+
+.img {
+    position: absolute;
+    width: 65px;
+    right: 0;
+    bottom: 0;
+}
+
+.card-features__two {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.8rem 1.6rem;
+    margin-bottom: 2rem;
+    box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    border-top: 5px solid var(--Red);
+}
+
+.card-features__three {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.8rem 1.6rem;
+    margin-bottom: 2rem;
+    box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    border-top: 5px solid var(--Orange);
+}
+
+.card-features__four {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.8rem 1.6rem;
+    margin-bottom: 2rem;
+    box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.21);
+    border-top: 5px solid var(--Blue);
+}
+
+/* laptop styles*/
+@media screen and (min-width:960px) {
+  
+
+   .card-features{
+       min-height: 100vh;
+       padding: 3rem;
+   }
+
+   .card-features-intro{
+       margin-bottom: 0;
+   }
+
+   .card-features-intro h1{
+       font-size: 2rem;
+       
+   }
+   
+   .card-features-intro span{
+       font-size: 2rem;
+   }
+   
+   .card-features__header,
+   .card-features__desc{
+       text-align: left;
+   }
+
+   .card-features-intro p{
+       font-size: 1rem;
+       font-weight: 400;
+       max-width: 600px;
+       margin-bottom: 0;
+       padding: 1rem;
+       margin: 0 auto;
+   }
+
+
+
+  .grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(2,1fr);
+        align-items: center;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        justify-items: center;
+        top: -60px;
+        margin-bottom: 5rem;
+    }
+
+    .card-feature__one{
+        grid-row: 2/3;
+        width: 80%;
+        position: relative;
+        left: 50px;
+        margin: 0;
+    }
+
+    .card-features__two{
+        grid-column: 2/3;
+        position: absolute;
+        top: 20%;
+        width: 80%;
+        margin: 0;
+       
+    }
+
+    .card-features__three{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        position: absolute;
+        width: 80%;
+       
+        top: -100px;
+        
+    }
+   
+    .card-features__four{
+        grid-row: 2/3;
+        grid-column: 3/4;
+        width: 80%;
+        position: relative;
+        right: 50px;
+        margin: 0;
+        
+    }
+
+}
